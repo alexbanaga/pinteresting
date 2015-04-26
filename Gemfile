@@ -9,13 +9,17 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass' 
+gem 'devise', '~> 3.4.1'
 
 group :development, :test do
      gem 'sqlite3'
 end
 
-gem 'rails_12factor', group: :production
-gem 'pg', group: :production
+group :production do 
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
